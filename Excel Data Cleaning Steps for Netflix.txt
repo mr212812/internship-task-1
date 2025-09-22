@@ -1,0 +1,48 @@
+Excel Data Cleaning Steps for Netflix Dataset
+
+Handling Missing Values:
+
+Used filter to find blank cells.
+
+Filled missing cells with "Unknown" using the formula:
+   =IF(A2="", "Unknown", A2)
+
+Applied this formula in a helper column and copied values back.
+
+2. Removing Duplicates:
+
+Selected all data.
+
+Used Data > Remove Duplicates to delete duplicate records.
+
+3. Standardizing Text:
+
+Used Find and Replace (Ctrl + H) to replace inconsistent country names.
+
+Used formulas to standardize text case:
+
+To uppercase: =UPPER(A2)
+
+To proper case: =PROPER(A2)
+
+4. Formatting Dates:
+
+Selected the "date_added" column.
+
+Used Format Cells > Custom with code dd-MM-yyyy to display dates consistently.
+
+5. Splitting Duration:
+
+Used Data > Text to Columns feature.
+
+Chose Delimited > Space to split duration into number and unit columns.
+
+6. Column Headers:
+
+Edited all headers to be lowercase and replaced spaces with underscores for uniformity.
+
+7. Final Checks:
+
+Verified numeric columns (e.g., release_year, duration_number) were correctly formatted as numbers.
+
+Checked text columns to be consistent and clean.
